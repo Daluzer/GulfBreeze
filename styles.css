@@ -1,0 +1,377 @@
+/* Variables */
+:root {
+    --primary-color: #FF6F61;
+    --secondary-color: #B6B095;
+    --background-color: #87CEEB;
+    --text-color: #333;
+    --white-color: #FFFFFF;
+    --font-family: 'Open Sans', Arial, sans-serif;
+    --padding: 10px;
+    --margin: 10px;
+    --border-radius: 5px;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Navigation */
+header {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: auto;
+    padding-right: 40px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+nav ul.active li {
+    margin: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: url('images/BedandBreakfast.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    margin-top: 60px;
+}
+
+.hero-inner {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-rooms, .special-offers {
+    padding: 20px;
+    text-align: center;
+}
+
+.special-offer-img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    background-color: var(--white-color);
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.room {
+    flex: 0 0 50%;
+    max-width: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    background-color: var(--white-color);
+}
+
+.room img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.room.expanded {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.carousel-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-button:hover, .carousel-button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 20px auto;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        min-height: 30vh;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .room {
+        flex: 0 0 50%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        min-height: 20vh;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .room {
+        flex: 0 0 100%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-button {
+        display: none;
+    }
+
+    .carousel-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .room {
+        flex: 0 0 auto;
+        max-width: none;
+    }
+}
+
+
+
+
+
+
+
