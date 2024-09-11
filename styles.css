@@ -369,6 +369,243 @@ footer {
     }
 }
 
+/* About Us Section */
+.about-us {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-us-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-text {
+    max-width: 800px;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .about-us-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .about-us-img {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Rooms & Rates Section */
+.rooms-rates {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.rooms-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.room.card {
+    flex: 1 1 calc(50% - 40px);
+    max-width: 400px;
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.room.card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.room.card h2 {
+    margin-top: 0;
+}
+
+.room.card p {
+    margin-bottom: 15px;
+}
+
+.room.card .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.room.card .cta-button:hover, .room.card .cta-button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .room.card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Booking Section */
+.booking {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.booking h1 {
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.booking-form input, .booking-form select, .booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+.booking-form button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.booking-form button:hover, .booking-form button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Amenities Section */
+.amenities {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.amenity {
+    margin-bottom: 40px;
+}
+
+.amenity h2 {
+    margin-bottom: 20px;
+}
+
+.amenity img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.amenity p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-us h1 {
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.contact-form button:hover, .contact-form button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
