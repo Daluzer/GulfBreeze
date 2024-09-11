@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
+    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation, Booking">
+    <meta name="author" content="Gulf Breeze Bed & Breakfast">
+    <meta property="og:title" content="Gulf Breeze Bed & Breakfast - Booking">
+    <meta property="og:description" content="Book your stay at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
+    <meta property="og:image" content="images/logo1.png">
+    <meta property="og:url" content="https://yourwebsite.com/booking.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gulf Breeze Bed & Breakfast - Booking">
+    <meta name="twitter:description" content="Book your stay at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
+    <meta name="twitter:image" content="images/logo1.png">
+    <title>Gulf Breeze Bed & Breakfast - Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header>
+        <div class="logo">
+            <img src="images/logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
+            <span>Gulf Breeze</span>
+        </div>
+        <nav id="nav-menu">
+            <div class="hamburger" aria-expanded="false" aria-controls="nav-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="about_us.html" aria-label="About Us">About Us</a></li>
+                <li><a href="rooms_&_rates.html" aria-label="Rooms and Rates">Rooms & Rates</a></li>
+                <li><a href="amenities.html" aria-label="Amenities">Amenities</a></li>
+                <li><a href="contact_us.html" aria-label="Contact Us">Contact Us</a></li>
+                <li><a href="booking.html" aria-label="Booking" class="active">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <section class="booking">
+            <h1>Book Your Stay!</h1>
+            <form action="submit_booking.php" method="post" class="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                
+                <label for="room">Room Type:</label>
+                <select id="room" name="room" required>
+                    <option value="couples-getaway">Couples Getaway</option>
+                    <option value="staycation">StayCation</option>
+                    <option value="let-us-plan">Let us plan</option>
+                    <option value="out-of-towners">Out of Towners</option>
+                </select>
+                
+                <label for="requests">Special Requests:</label>
+                <textarea id="requests" name="requests" rows="4"></textarea>
+                
+                <button type="submit" class="cta-button">Book Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>727-100-0000<br>100 Breeze Way<br>St. Petersburg, Florida</p>
+        </div>
+        <div class="footer-middle">
+            <p>© 2024 Gulf Breeze Bed & Breakfast</p>
+        </div>
+        <div class="footer-right">
+            <div class="social-media">
+                <a href="#" aria-label="Facebook">Facebook</a><br>
+                <a href="#" aria-label="Twitter">Twitter</a><br>
+                <a href="#" aria-label="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js" defer></script>
+</body>
+</html>
+
