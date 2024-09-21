@@ -152,7 +152,7 @@ nav ul.active li {
     position: relative;
     width: 100%;
     min-height: 80vh;
-    background: url('images/BedandBreakfast.jpg') no-repeat center center;
+    background: url('BedandBreakfast.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
