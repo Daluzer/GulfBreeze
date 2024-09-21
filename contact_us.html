@@ -17,12 +17,13 @@
     <title>Gulf Breeze Bed & Breakfast - Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
         <div class="logo">
-            <img src="logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
+            <img src="images/logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
             <span>Gulf Breeze</span>
         </div>
         <nav id="nav-menu">
@@ -43,7 +44,7 @@
     </header>
     
     <main id="main-content">
-        <section class="contact-us">
+        <section class="contact-us" data-aos="fade-up">
             <h1>If you have any questions or concerns, please reach out!</h1>
             <form action="submit_contact.php" method="post" class="contact-form">
                 <label for="name">Name:</label>
@@ -74,6 +75,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts.js" defer></script>
 </body>
 </html>
+

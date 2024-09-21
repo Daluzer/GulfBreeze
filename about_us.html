@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
-    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation">
+    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation, Gulf Breeze, Vacation, Travel">
     <meta name="author" content="Gulf Breeze Bed & Breakfast">
     <meta property="og:title" content="Gulf Breeze Bed & Breakfast">
     <meta property="og:description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
@@ -17,6 +17,7 @@
     <title>Gulf Breeze Bed & Breakfast</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,7 +41,7 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
         <div class="logo">
-            <img src="logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
+            <img src="images/logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
             <span>Gulf Breeze</span>
         </div>
         <nav id="nav-menu">
@@ -51,7 +52,7 @@
             </div>
             <ul>
                 <li><a href="index.html" aria-label="Home">Home</a></li>
-                <li><a href="about_us.html" aria-label="About Us">About Us</a></li>
+                <li><a href="about_us.html" aria-label="About Us" class="active">About Us</a></li>
                 <li><a href="rooms_&_rates.html" aria-label="Rooms and Rates">Rooms & Rates</a></li>
                 <li><a href="amenities.html" aria-label="Amenities">Amenities</a></li>
                 <li><a href="contact_us.html" aria-label="Contact Us">Contact Us</a></li>
@@ -61,10 +62,10 @@
     </header>
     
     <main id="main-content">
-        <section class="about-us">
-            <h1>About Us</h1>
+        <section class="about-us" data-aos="fade-up">
+            <h1 class="about_h1">About Us</h1>
             <div class="about-us-content">
-                <img src="brandon_christiane.jpg" alt="Brandon and Christiane, owners of Gulf Breeze Bed & Breakfast" class="about-us-img" loading="lazy">
+                <img src="images/brandon_christiane.jpg" alt="Brandon and Christiane, owners of Gulf Breeze Bed & Breakfast" class="about-us-img" loading="lazy">
                 <div class="about-us-text">
                     <p>Welcome to Gulf Breeze Bed & Breakfast! Located in the heart of St. Petersburg, Florida,
                          The Gulf Breeze Bed & Breakfast offers a charming retreat for travelers seeking a home
@@ -94,6 +95,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts.js" defer></script>
 </body>
 </html>

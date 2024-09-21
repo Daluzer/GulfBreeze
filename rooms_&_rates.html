@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
-    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation">
+    <meta name="description" content="Explore the rooms and rates at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
+    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation, Rooms, Rates">
     <meta name="author" content="Gulf Breeze Bed & Breakfast">
-    <meta property="og:title" content="Gulf Breeze Bed & Breakfast">
-    <meta property="og:description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
+    <meta property="og:title" content="Gulf Breeze Bed & Breakfast - Rooms & Rates">
+    <meta property="og:description" content="Explore the rooms and rates at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
     <meta property="og:image" content="images/logo1.png">
-    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:url" content="https://yourwebsite.com/rooms_&_rates.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gulf Breeze Bed & Breakfast">
-    <meta name="twitter:description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
+    <meta name="twitter:title" content="Gulf Breeze Bed & Breakfast - Rooms & Rates">
+    <meta name="twitter:description" content="Explore the rooms and rates at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
     <meta name="twitter:image" content="images/logo1.png">
-    <title>Gulf Breeze Bed & Breakfast</title>
+    <title>Gulf Breeze Bed & Breakfast - Rooms & Rates</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,7 +33,7 @@
       },
       "telephone": "+1-727-100-0000",
       "image": "images/logo1.png",
-      "description": "Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida."
+      "description": "Explore the rooms and rates at Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida."
     }
     </script>
 </head>
@@ -40,7 +41,7 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
         <div class="logo">
-            <img src="logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
+            <img src="images/logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
             <span>Gulf Breeze</span>
         </div>
         <nav id="nav-menu">
@@ -52,7 +53,7 @@
             <ul>
                 <li><a href="index.html" aria-label="Home">Home</a></li>
                 <li><a href="about_us.html" aria-label="About Us">About Us</a></li>
-                <li><a href="rooms_&_rates.html" aria-label="Rooms and Rates">Rooms & Rates</a></li>
+                <li><a href="rooms_&_rates.html" aria-label="Rooms and Rates" class="active">Rooms & Rates</a></li>
                 <li><a href="amenities.html" aria-label="Amenities">Amenities</a></li>
                 <li><a href="contact_us.html" aria-label="Contact Us">Contact Us</a></li>
                 <li><a href="booking.html" aria-label="Booking">Booking</a></li>
@@ -61,29 +62,29 @@
     </header>
     
     <main id="main-content">
-        <section class="rooms-rates">
-            <h1>Rooms & Rates</h1>
+        <section class="rooms-rates" data-aos="fade-up">
+            <h1 class="rooms_h1">Rooms & Rates</h1>
             <div class="rooms-cards">
                 <div class="room card">
-                    <img src="Room1.jpg" alt="Couples Getaway room with king-size bed and two bottles of wine" loading="lazy">
+                    <img src="images/Room1.jpg" alt="Couples Getaway room with king-size bed and two bottles of wine" loading="lazy">
                     <h2>Couples Getaway</h2>
                     <p>King size bed, 2 bottles of wine, one amazing getaway! Starting at $150/night.</p>
                     <a href="booking.html" class="cta-button" aria-label="Book Couples Getaway">Book Now</a>
                 </div>
                 <div class="room card">
-                    <img src="Room2.jpg" alt="StayCation room with king-size bed and better views" loading="lazy">
+                    <img src="images/Room2.jpg" alt="StayCation room with king-size bed and better views" loading="lazy">
                     <h2>StayCation</h2>
                     <p>King size bed, better views, a home away from home. Starting at $140/night.</p>
                     <a href="booking.html" class="cta-button" aria-label="Book StayCation">Book Now</a>
                 </div>
                 <div class="room card">
-                    <img src="Room3.jpg" alt="Let us plan room with king-size bed and vacation planning service" loading="lazy">
+                    <img src="images/Room3.jpg" alt="Let us plan room with king-size bed and vacation planning service" loading="lazy">
                     <h2>Let us plan</h2>
                     <p>King size bed, and an amazing vacation planned by us! Starting at $160/night.</p>
                     <a href="booking.html" class="cta-button" aria-label="Book Let us plan">Book Now</a>
                 </div>
                 <div class="room card">
-                    <img src="Room4.jpg" alt="Out of Towners room with king-size bed and local guide" loading="lazy">
+                    <img src="images/Room4.jpg" alt="Out of Towners room with king-size bed and local guide" loading="lazy">
                     <h2>Out of Towners</h2>
                     <p>King size bed, a breakdown of everything local, list of best restaurants around, complete must-do while visiting list! Starting at $155/night.</p>
                     <a href="booking.html" class="cta-button" aria-label="Book Out of Towners">Book Now</a>
@@ -106,6 +107,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts.js" defer></script>
 </body>
 </html>
+

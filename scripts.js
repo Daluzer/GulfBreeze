@@ -1,12 +1,26 @@
-const track = document.querySelector('.carousel-track');
-const rooms = track ? Array.from(track.children) : [];
-const nextButton = document.querySelector('.carousel-button.next');
-const prevButton = document.querySelector('.carousel-button.prev');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav ul');
+const carousel = document.querySelector('.carousel-track')
 
-let currentIndex = 0;
-let isThrottled = false;
+
+
+if (nav || hamburger) {
+// Toggle navigation menu on hamburger click
+hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('active');
+});
+}
+
+if (carousel){
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const track = document.querySelector('.carousel-track');
+    const rooms = track ? Array.from(track.children) : [];
+
+    let isThrottled = false;
+    let currentIndex = 0;
 
 // Update the carousel position based on the current index
 const updateCarousel = () => {
@@ -79,12 +93,7 @@ window.addEventListener('resize', debounce(() => {
     updateCarousel();
 }, 200));
 
-// Toggle navigation menu on hamburger click
-hamburger.addEventListener('click', () => {
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-    hamburger.setAttribute('aria-expanded', !expanded);
-    nav.classList.toggle('active');
-});
+}
 
 
 

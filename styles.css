@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --primary-color: #FF6F61;
-    --secondary-color: #B6B095;
+    --primary-color: #B6B095;
+    --secondary-color: #FF6F61;
     --background-color: #87CEEB;
     --text-color: #333;
     --white-color: #FFFFFF;
@@ -55,8 +55,8 @@ p {
 
 /* Navigation */
 header {
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
+    background-color: var(--primary-color);
+    padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,15 +99,15 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white-color);
     padding: 10px 15px;
     border-radius: var(--border-radius);
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover, nav ul li a:focus {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /* Hamburger Menu */
@@ -122,7 +122,7 @@ nav ul li a:hover, nav ul li a:focus {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: var(--white-color);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -132,17 +132,19 @@ nav ul {
 }
 
 nav ul.active {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-align: center;
+    padding: 0;
 }
 
 nav ul.active li {
-    margin: 10px 0;
+    margin: 20px;
 }
 
 /* Hero Section */
@@ -150,7 +152,7 @@ nav ul.active li {
     position: relative;
     width: 100%;
     min-height: 80vh;
-    background: url('BedandBreakfast.jpg') no-repeat center center;
+    background: url('images/BedandBreakfast.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -261,10 +263,11 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     text-align: center;
     padding: 20px 0;
+    align-items: center;
 }
 
 .footer-left, .footer-middle, .footer-right {
@@ -274,6 +277,7 @@ footer {
 
 .footer-left {
     text-align: left;
+    padding-left: 30px;
 }
 
 .footer-right {
@@ -284,9 +288,274 @@ footer {
     margin: 0 10px;
     text-decoration: none;
     color: var(--white-color);
+    padding-right: 30px;
 }
 
-/* Responsive Styles */
+.rooms_h1 {
+    padding-top: 30px;
+}
+
+.amen_h1 {
+    padding-top: 30px;
+}
+
+.about_h1 {
+    padding-top: 50px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduce the gap between image and text */
+    padding-bottom: 40px; /* Add padding to the bottom */
+}
+
+.about-us-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--secondary-color);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about-us-text {
+    max-width: 400px; /* Adjust max-width to match the image width */
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    gap: 10px; /* Add some space between paragraphs */
+}
+
+@media (min-width: 768px) {
+    .about-us-content {
+        flex-direction: row;
+        align-items: flex-start; /* Align items to the start */
+        justify-content: center;
+        gap: 10px; /* Reduce the gap for larger screens */
+    }
+
+    .about-us-img {
+        margin-right: 10px; /* Reduce the right margin */
+        margin-bottom: 0;
+    }
+
+    .about-us-text {
+        height: auto; /* Adjust height to fit content */
+    }
+}
+
+
+
+
+/* Rooms & Rates Section */
+.rooms-rates {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.rooms-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+    gap: 20px;
+    justify-content: center; /* Center the grid */
+    margin: 0 auto; /* Center the grid container */
+    max-width: 1300px; /* Set a max-width to control the layout */
+}
+
+.room.card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+}
+
+.room.card img {
+    width: 100%;
+    height: 70%; 
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+
+/* Amenities Section */
+.amenities {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.amenities-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.amenity.card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.amenity.card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    max-height: 250px;
+    max-width: 400px;
+}
+
+
+/* Common Card Styles */
+.card {
+    flex: 1 1 calc(50% - 40px);
+    max-width: 400px;
+    min-width: 320px;
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+/* Booking Section */
+.booking {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.booking h1 {
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.booking-form input, .booking-form select, .booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+.booking-form button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.booking-form button:hover, .booking-form button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-us h1 {
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.contact-form button:hover, .contact-form button:focus {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -361,6 +630,10 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
     }
 
     .room {
@@ -368,247 +641,3 @@ footer {
         max-width: none;
     }
 }
-
-/* About Us Section */
-.about-us {
-    padding: 20px;
-    text-align: center;
-}
-
-.about-us-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.about-us-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-us-text {
-    max-width: 800px;
-    background-color: var(--white-color);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-@media (min-width: 768px) {
-    .about-us-content {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .about-us-img {
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-}
-
-/* Rooms & Rates Section */
-.rooms-rates {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.rooms-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.room.card {
-    flex: 1 1 calc(50% - 40px);
-    max-width: 400px;
-    background-color: var(--white-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-}
-
-.room.card img {
-    width: 100%;
-    border-radius: var(--border-radius);
-    margin-bottom: 15px;
-}
-
-.room.card h2 {
-    margin-top: 0;
-}
-
-.room.card p {
-    margin-bottom: 15px;
-}
-
-.room.card .cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-
-.room.card .cta-button:hover, .room.card .cta-button:focus {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-    .room.card {
-        flex: 1 1 100%;
-    }
-}
-
-/* Booking Section */
-.booking {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.booking h1 {
-    margin-bottom: 20px;
-    margin-top: 80px;
-}
-
-.booking-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: var(--white-color);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-.booking-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.booking-form input, .booking-form select, .booking-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-}
-
-.booking-form button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    cursor: pointer;
-}
-
-.booking-form button:hover, .booking-form button:focus {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Amenities Section */
-.amenities {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.amenity {
-    margin-bottom: 40px;
-}
-
-.amenity h2 {
-    margin-bottom: 20px;
-}
-
-.amenity img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-.amenity p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/* Contact Us Section */
-.contact-us {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.contact-us h1 {
-    margin-bottom: 40px;
-    margin-top: 100px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 80px auto;
-    background-color: var(--white-color);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-}
-
-.contact-form button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    cursor: pointer;
-}
-
-.contact-form button:hover, .contact-form button:focus {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-
-
-
-
-

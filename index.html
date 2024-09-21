@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
-    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation">
+    <meta name="keywords" content="Bed and Breakfast, St. Petersburg, Florida, Accommodation, Gulf Breeze, Vacation, Travel">
     <meta name="author" content="Gulf Breeze Bed & Breakfast">
     <meta property="og:title" content="Gulf Breeze Bed & Breakfast">
     <meta property="og:description" content="Welcome to Gulf Breeze Bed & Breakfast, a charming retreat in St. Petersburg, Florida.">
@@ -17,6 +17,7 @@
     <title>Gulf Breeze Bed & Breakfast</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,7 +41,7 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
         <div class="logo">
-            <img src="logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
+            <img src="images/logo1.png" alt="Gulf Breeze Logo" class="logo-img" loading="lazy">
             <span>Gulf Breeze</span>
         </div>
         <nav id="nav-menu">
@@ -61,34 +62,42 @@
     </header>
     
     <main id="main-content">
-        <section class="hero">
+        <section class="hero" data-aos="fade-up">
             <div class="hero-inner">
                 <h1>Welcome to Gulf Breeze Bed & Breakfast</h1>
                 <p>The best beds, and breakfast in town!</p>
                 <a href="rooms_&_rates.html" class="cta-button" aria-label="Book Now">Book Now</a>
             </div>
         </section>
-        <section class="featured-rooms">
+        <section class="featured-rooms" data-aos="fade-up">
             <h2>Rooms of the Month</h2>
             <div class="carousel">
                 <button class="carousel-button prev" aria-label="Previous Room">‹</button>
                 <div class="carousel-track-container">
                     <div class="carousel-track">
                         <div class="room card" role="tabpanel" aria-hidden="false">
-                            <img src="Room1.jpg" alt="Couples Getaway!" loading="lazy">
-                            <p>Couples Getaway! King size bed, 2 bottles of wine, one amazing Getaway!...</p>
+                            <img src="images/Room1.jpg" alt="Couples Getaway!" loading="lazy">
+                            <h2>Couples Getaway!</h2>
+                                <p>King size bed, 2 bottles of wine, one amazing Getaway!...</p>
+                                <a href="booking.html" class="cta-button" aria-label="Book Couples Getaway!">Book Now</a>
                         </div>
                         <div class="room card" role="tabpanel" aria-hidden="true">
-                            <img src="Room2.jpg" alt="StayCation!" loading="lazy">
-                            <p>StayCation! King size bed, Better Views, A home away from home...</p>
+                            <img src="images/Room2.jpg" alt="StayCation!" loading="lazy">
+                            <h2>StayCation!</h2>
+                            <p>King size bed, Better Views, A home away from home...</p>
+                            <a href="booking.html" class="cta-button" aria-label="Book StayCation!">Book Now</a>
                         </div>
                         <div class="room card" role="tabpanel" aria-hidden="true">
-                            <img src="Room3.jpg" alt="Let us plan!" loading="lazy">
-                            <p>Let us plan! King size bed, and a amazing vacation planned by us!...</p>
+                            <img src="images/Room3.jpg" alt="Let us plan!" loading="lazy">
+                            <h2>Let us plan!</h2>
+                            <p>King size bed, and a amazing vacation planned by us!...</p>
+                            <a href="booking.html" class="cta-button" aria-label="Book Let us plan!">Book Now</a>
                         </div>
                         <div class="room card" role="tabpanel" aria-hidden="true">
-                            <img src="Room4.jpg" alt="Out of Towners!" loading="lazy">
-                            <p>Out of Towners! King size bed, a break down of everything local, List of best restaurants around, Complete must do while visiting list!...</p>
+                            <img src="images/Room4.jpg" alt="Out of Towners!" loading="lazy">
+                            <h2>Out of Towners!</h2>
+                             <p>King size bed, a break down of everything local,<br> List of best restaurants around, Complete must do while visiting list!...</p>
+                             <a href="booking.html" class="cta-button" aria-label="Book Out of Towners">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -98,18 +107,22 @@
 
         <div class="divider"></div>
 
-        <section class="special-offers">
+        <section class="special-offers" data-aos="fade-up">
             <h2>Best Offers Around!</h2>
-            <img src="Buffet.jpg" alt="Special Offer" class="special-offer-img" loading="lazy">
+            <img src="images/Buffet.jpg" alt="Special Offer" class="special-offer-img" loading="lazy">
             <p>Free Breakfast Buffet With Rental Of King Size Room.</p>
         </section>
     </main>
     <footer>
         <div class="footer-left">
+            <div class="mailing-address">
             <p>727-100-0000<br>100 Breeze Way<br>St. Petersburg, Florida</p>
         </div>
+        </div>
         <div class="footer-middle">
+            <div class="copyright">
             <p>© 2024 Gulf Breeze Bed & Breakfast</p>
+        </div>
         </div>
         <div class="footer-right">
             <div class="social-media">
@@ -119,9 +132,16 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts.js" defer></script>
 </body>
 </html>
+
+
+
 
 
 
